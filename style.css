@@ -1,0 +1,171 @@
+/*General*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-image: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  justify-content: center;
+}
+
+div.card-container {
+  width: 80%;
+}
+
+/*Cards*/
+
+div.card-container > div {
+  background-color: hsl(228, 56%, 26%);
+  padding: 2rem;
+}
+
+/*First Card*/
+
+div.card-container > div:first-child {
+  border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
+div.icons {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+div.icons > img {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 0.3rem;
+  height: 3rem;
+  object-fit: contain;
+  padding: 0.5rem;
+  width: 3rem;
+}
+
+/*Second Card*/
+
+div.card-container > div:last-child {
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+div.card-container > div:last-child > p {
+  color: hsl(243, 100%, 93%);
+  font-size: 0.9rem;
+}
+
+p span {
+  font-weight: 700;
+}
+
+/*Gradient bar*/
+
+div.gradient-container {
+  border-radius: 2rem;
+  background-color: hsl(229, 57%, 11%);
+  height: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+div.gradient {
+  background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border: 1px solid hsl(229, 57%, 11%);
+  border-radius: 2rem;
+  height: 1rem;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+div.gradient > div {
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 50%;
+  height: 0.8rem;
+  margin-right: 0.1rem;
+  width: 0.8rem;
+}
+
+div.gradient-values {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  position: relative;
+}
+
+div.gradient-values > div {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  padding: 0.8rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 1.8rem;
+  left: 22%;
+}
+
+div.gradient-values > div p:first-child {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 376px) {
+  body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("images/bg-desktop.png");
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 1000px) {
+  div.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 70%;
+  }
+
+  div.card-container > div:first-child {
+    margin-bottom: 0;
+    padding: 2.5rem;
+    width: 40%;
+  }
+
+  div.card-container > div:last-child {
+    align-self: flex-end;
+    height: 80%;
+    width: 60%;
+  }
+
+  div.gradient-values > div {
+    top: -9rem;
+    right: 0;
+    left: 70%;
+  }
+}
